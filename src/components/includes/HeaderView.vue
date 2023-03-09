@@ -75,17 +75,13 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-3 col-md-3 col-7">
-
             <router-link class="navbar-brand" :to="{name:'home'}">
               <!-- <img src="assets/images/logo/logo.svg" alt="Logo"> -->
               <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">Ecom</span>Mart</h1>
             </router-link>
-
           </div>
           <div class="col-lg-5 col-md-7 d-xs-none">
-
             <div class="main-menu-search">
-
               <div class="navbar-search search-style-5">
                 <div class="search-select">
                   <div class="select-position">
@@ -147,7 +143,7 @@
                         <div class="content">
                           <h4><a href="product-details.html">
                               Apple Watch Series 6</a></h4>
-                          <p class="quantity">1x - <span class="amount">$99.00</span></p>
+                          <p class="quantity">1x - <span class="amount">$89.00</span></p>
                         </div>
                       </li>
                       <li>
