@@ -1,5 +1,8 @@
-# ecom_b5
-
+# ecom_mart
+# Mobarak Hossain
+# 25.02.2023
+# Ecom Mart
+# VueJS frontend project
 ## Project setup
 ```
 npm install
