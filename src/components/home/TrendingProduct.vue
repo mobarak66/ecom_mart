@@ -15,7 +15,7 @@
 
                 <div class="single-product">
                     <div class="product-image">
-                        <img :src="product.image" alt="#">
+                        <img :src="product.image" alt="#" height="300">
                         <div class="button">
                             <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
                         </div>

@@ -191,8 +191,7 @@
                       <a href="#">{{subCategory.name}}</a>
                     </li>
                   </ul>
-                </li>
-                
+                </li>                
               </ul>
             </div>
             <nav class="navbar navbar-expand-lg">
@@ -206,7 +205,7 @@
               <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                 <ul id="nav" class="navbar-nav ms-auto">
                   <li class="nav-item">
-                    <a href="index.html" aria-label="Toggle navigation">Home</a>
+                    <router-link :to="{name:'home'}" aria-label="Toggle navigation">Home</router-link>
                   </li>
                   <li class="nav-item">
                     <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
@@ -226,7 +225,6 @@
                       data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false"
                       aria-label="Toggle navigation">Shop</a>
                     <ul class="sub-menu collapse" id="submenu-1-3">
-                      <li class="nav-item active"><a href="product-grids.html">Shop Grid</a></li>
                       <li class="nav-item"><a href="product-list.html">Shop List</a></li>
                       <li class="nav-item"><a href="product-details.html">shop Single</a></li>
                       <li class="nav-item"><a href="cart.html">Cart</a></li>
