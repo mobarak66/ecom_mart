@@ -46,7 +46,7 @@
                                 <div class="col-12">
                                     <div class="form-group color-option">
                                         <label class="title-label" >Quantity</label>
-                                        <input type="number" value="1" min="1" required class="form-control">
+                                        <input type="number" required class="form-control" v-model="qty" min="1">
                                         
                                     </div>
                                 </div>
@@ -56,7 +56,7 @@
                                 <div class="row align-items-end">
                                     <div class="col-lg-4 col-md-4 col-12">
                                         <div class="button cart-button">
-                                            <button class="btn" style="width: 100%;">Add to Cart</button>
+                                            <button class="btn" style="width: 100%;" @click="addToCart">Add to Cart</button>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-12">
@@ -264,19 +264,49 @@
     </div>
 </template>
 <script>
-    import axios from 'axios'
+    import axios from 'axios';
+
     export default{
     name: "DetailView",
     data(){
-        return{
-            id: this.$route.params.id,
-            product: {},
-        }
-    },
-    created(){
-          axios.get('http://127.0.0.1:8000/api/get-product-by-id/' + this.id).then(response=>{
-            this.product = response.data;
-          });
+        return {
+                id: this.$route.params.id,
+                product:{},
+                qty: 1,
+            }
+         },
+        created() {
+            this.getProductById();
+        },
+        methods: {
+            getProductById()
+            {
+                axios.get('http://127.0.0.1:8000/api/get-product-by-id/'+this.id).then((response) => {
+                    this.product = response.data;
+                })
+            },
+
+        addToCart()
+            {
+                var product = {id: this.product.id, name: this.product.name, price: this.product.selling_price, image: this.product.image, qty: this.qty, total: this.product.selling_price * this.qty}
+                var cartProducts = this.$store.getters.getProducts;
+                var check = cartProducts.find(item => item.id == this.product.id);
+                if (check)
+                {
+                    this.$store.commit('updateCart', {id: this.product.id, qty: check.qty + this.qty})
+                    this.$store.commit('updateSubTotalPrice');
+                    this.$store.commit('updateTaxTotalPrice');
+                    this.$store.commit('updateGrandTotalPrice');
+                }
+                else
+                {
+                    this.$store.commit('addToCart', product);
+                    this.$store.commit('updateSubTotalPrice');
+                    this.$store.commit('updateTaxTotalPrice');
+                    this.$store.commit('updateGrandTotalPrice');
+                }
+                this.$router.push('/show-cart');
+            }
         }
     }
 
