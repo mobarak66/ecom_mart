@@ -19,6 +19,12 @@ const routes = [
     component: () => import(/* webpackChunkName: "category" */ '../views/CategoryView.vue')
   },
   {
+    path: '/product-sub-category/:id',
+    name: 'subcategory',
+    
+    component: () => import(/* webpackChunkName: "subcategory" */ '../views/SubCategoryView.vue')
+  },
+  {
     path: '/product-detail/:id',
     name: 'detail',
     

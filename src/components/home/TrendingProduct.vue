@@ -23,7 +23,7 @@
                     <div class="product-info">
                         <span class="category">{{ product.category_name }}</span>
                         <h4 class="title">
-                            <a href="product-grids.html">{{ product.name }}</a>
+                            <router-link :to="{name:'detail', params:{id: product.id}}">{{ product.name }}</router-link>
                         </h4>
                         <ul class="review">
                             <li><i class="lni lni-star-filled"></i></li>

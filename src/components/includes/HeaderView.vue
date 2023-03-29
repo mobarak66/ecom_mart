@@ -188,7 +188,7 @@
                   <router-link :to="{name: 'category', params:{id: category.id}}">{{ category.name }}</router-link>
                   <ul class="inner-sub-category">
                     <li v-for="(subCategory, index1) in category.sub_category" :key="index1">
-                      <a href="#">{{subCategory.name}}</a>
+                      <router-link :to="{name: 'subcategory', params:{id:subCategory.id}}">{{subCategory.name}}</router-link>
                     </li>
                   </ul>
                 </li>                
@@ -205,7 +205,7 @@
               <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                 <ul id="nav" class="navbar-nav ms-auto">
                   <li class="nav-item">
-                    <router-link :to="{name:'home'}" aria-label="Toggle navigation">Home</router-link>
+                    <router-link  aria-label="Toggle navigation" :to="{name:'home'}">Home</router-link>
                   </li>
                   <li class="nav-item">
                     <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
@@ -227,8 +227,8 @@
                     <ul class="sub-menu collapse" id="submenu-1-3">
                       <li class="nav-item"><a href="product-list.html">Shop List</a></li>
                       <li class="nav-item"><a href="product-details.html">shop Single</a></li>
-                      <li class="nav-item"><a href="cart.html">Cart</a></li>
-                      <li class="nav-item"><a href="checkout.html">Checkout</a></li>
+                      <li class="nav-item"><router-link :to="{name: 'cart'}">Cart</router-link></li>
+                      <li class="nav-item"><router-link :to="{name: 'checkout'}">Checkout</router-link></li>
                     </ul>
                   </li>
                   <li class="nav-item">
