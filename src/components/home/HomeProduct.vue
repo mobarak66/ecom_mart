@@ -16,8 +16,6 @@
                         <span>$287.99</span>
                     </div>
                 </div>
-
-
                 <div class="single-list">
                     <div class="list-image">
                         <a href="product-grids.html"><img src="assets/images/home-product-list/02.jpg" alt="#"></a>
@@ -29,8 +27,6 @@
                         <span>$95.00</span>
                     </div>
                 </div>
-
-
                 <div class="single-list">
                     <div class="list-image">
                         <a href="product-grids.html"><img src="assets/images/home-product-list/03.jpg" alt="#"></a>
@@ -46,7 +42,6 @@
             </div>
             <div class="col-lg-4 col-md-4 col-12 custom-responsive-margin">
                 <h4 class="list-title">New Arrivals</h4>
-
                 <div class="single-list">
                     <div class="list-image">
                         <a href="product-grids.html"><img src="assets/images/home-product-list/04.jpg" alt="#"></a>
@@ -58,8 +53,6 @@
                         <span>$1150.00</span>
                     </div>
                 </div>
-
-
                 <div class="single-list">
                     <div class="list-image">
                         <a href="product-grids.html"><img src="assets/images/home-product-list/05.jpg" alt="#"></a>
